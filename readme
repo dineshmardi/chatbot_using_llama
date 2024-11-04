@@ -1,0 +1,48 @@
+
+README File
+
+Here's a draft structure for the README file.
+
+Financial News Chatbot
+Overview
+This chatbot, powered by Gemini and Gradio, provides answers to questions about financial news by embedding, indexing, and querying a collection of news articles. It uses the llama_index library to manage document loading, chunking, embedding, and vector storage.
+
+Setup Instructions
+Install Required Packages:
+
+bash
+Copy code
+pip install llama-index qdrant-client gradio
+Set Up Google API Key (if required):
+
+Place your Google API key in the code or set it as an environment variable.
+Prepare Dataset:
+
+Place your dataset in the folder named Dataset in the project directory.
+Run the Notebook:
+
+Open app.ipynb and run each cell in sequence, or run the script directly if available.
+Code Details
+Data Loading:
+
+Loads documents from the Dataset folder.
+Text Chunking:
+
+Splits documents into chunks of 1024 tokens for efficient embedding and querying.
+Embedding Model:
+
+Embeds text chunks using the BAAI/bge-small-en-v1.5 model from FastEmbedEmbedding.
+Vector Store:
+
+Stores embeddings in a Qdrant vector store for efficient similarity search.
+Query Engine:
+
+Uses RetrieverQueryEngine to retrieve the most relevant information for each query.
+User Interface:
+
+Powered by Gradio, the interface enables users to interact with the chatbot seamlessly.
+Usage
+Launch the Chatbot Interface:
+Run the code, which will open a Gradio interface where you can input queries.
+Ask Questions:
+Try asking questions about financial news, stock performance, recent headlines, or specific events.
